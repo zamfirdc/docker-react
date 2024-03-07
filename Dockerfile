@@ -8,4 +8,6 @@ RUN npm run build
 
 #run phase
 FROM nginx
+#expose is only for Elastic Beanstalk
+EXPOSE 80 
 COPY --from=builder /app/build /usr/share/nginx/html
